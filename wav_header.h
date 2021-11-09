@@ -1,5 +1,11 @@
+customizable.h
+echo.cpp
+echo.h
+gain_ad.cpp
+gain_ad.h
 main.cpp
-mormalization.cpp
+makefile
+normalization.cpp
 normalization.h
 printer.cpp
 printer.h
@@ -12,3 +18,4 @@ wav_filecopy.cpp
 wav_filecopy.h
 wav_file.cpp
 wav_file.h
+wav_header.h

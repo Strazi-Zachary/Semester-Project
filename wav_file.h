@@ -1,3 +1,3 @@
-main.cpp
-README.md
-wav_file.h
+//wavfile struct riff,fmt,data
+//create buffer
+//file management or create a file management class?

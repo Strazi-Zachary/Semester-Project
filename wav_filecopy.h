@@ -1,5 +1,1 @@
-main.cpp
-README.md
-wav_filecopy.h
-wav_file.cpp
-wav_file.h
+//creates copy of edited files maybe this can be wave edits?
