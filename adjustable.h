@@ -3,7 +3,7 @@
 
 
 
-class Adjustable {
+class : Adjustable {
 	public:
 		virtual void adjust() = 0;
 		
