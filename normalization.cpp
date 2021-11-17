@@ -18,8 +18,6 @@ void stereoBuffer(unsigned char* buffer, int bufferSize){
 
 
 }
-
-
 void stereoBuffer(signed short* buffer, int bufferSize){
 
 
