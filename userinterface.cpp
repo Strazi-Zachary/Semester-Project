@@ -9,28 +9,30 @@ wav_filecopy.h
 wav_file.cpp
 wav_file.h
 
-int main(int argc,char** arg){
-    int menuChoice;
-    if(argc!=3){
-        cout<<"bro. you need more info"<<std::endl;
-        switch (menuChoice){
+class UI{
+private: int menuChoice;
+public:
+    UI(int choice){
+        menuChoice=choice;
+        switch (menuChoice) {
             case 1:
                 //display file info
+                std::cout << "file" << std::endl;
                 break;
             case 2:
+                std::cout << "echo" << std::endl;
                 //echo
                 break;
             case 3:
+                std::cout << "normal" << std::endl;
                 //normalization
                 break;
             case 4:
+                std::cout << "gain" << std::endl;
                 //gain
                 break;
-            case 0:
-                //end loop
-                break;
-
-
+            default:
+                std::cout<<"enter a proper menu choice please"<<std::endl;
         }
     }
-    return 0;
+};
