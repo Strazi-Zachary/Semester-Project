@@ -3,7 +3,7 @@
 
 
 
-class Normalizable {
+class : Normalizable {
 	public:
 		virtual void normalize() = 0;
 		

@@ -13,7 +13,11 @@ public:
 		
 	Normalization() = default;	
 
-	void normalize() override;	
+	void normalize() override;
+	void monoBuffer(unsigned char* buffer, int bufferSize) override;
+	void monoBuffer(signed short* buffer, int bufferSize) override;
+	void stereoBuffer(unsigned char* buffer, int bufferSize) override;
+	void stereoBuffer(signed short* buffer, int bufferSize) override;	
 		
 	
 };

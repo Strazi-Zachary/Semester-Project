@@ -3,7 +3,7 @@
 
 
 
-class Echoable {
+class : Echoable {
 	public:
 		virtual void reverberate() = 0;
 		
