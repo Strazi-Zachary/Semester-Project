@@ -4,12 +4,8 @@
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
-#include "echoable.h"
-#include "adjustable.h"
-#include "normalizable.h"
-#include "wav_file.h"
 
-class Processor : public Normalizable : public Echoable : public Adjustable{
+class Processor{
 	
 public:
 		

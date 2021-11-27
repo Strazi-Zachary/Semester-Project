@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <cmath>
-#include <stdlib>
+#include <cstdlib>
 #include "processor.h"
 #include "echoable.h"
 
@@ -11,9 +11,9 @@ class Echo : public Processor {
 	
 public:
 	
-	Echo() = default;	
+	Echo() = default;
 
-	void reverberate() override;
+	echo(int delay)	
 	
         void monoBuffer(unsigned char* buffer, int bufferSize) override;
 	void monoBuffer(signed short* buffer, int bufferSize) override;

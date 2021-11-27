@@ -3,17 +3,20 @@
 
 #include <iostream>
 #include <cmath>
-#include <stdlib>
+#include <cstdlib>
 #include "processor.h"
 #include "adjustable.h"
 
 class Gain : public Processor{
-	
+	float adjust;	
+
 public:
 		
-	Gain() = default;	
+	gain() = default;
 
-	void adjust() override;	
+	gainAd(float newAdjust);
+	
+	
 	void monoBuffer(unsigned char* buffer, int bufferSize) override;
 	void monoBuffer(signed short* buffer, int bufferSize) override;
 	void stereoBuffer(unsigned char* buffer, int bufferSize) override;
