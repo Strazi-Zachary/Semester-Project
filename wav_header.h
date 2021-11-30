@@ -1,31 +1,69 @@
-#ifndef WAVEHEADER_H
+#ifndef WAVE_HEADER_H
 #define WAVE_HEADER_H
 
+	/**
+	 * Struct containing wav file's technical data variables
+	 */
+typedef struct wav_header {
+    // RIFF Header
 
-typedef struct wav_header{
+    /**
+	 * Riff Header variable from wav files, Contains "RIFF"
+	 */
+    char riff_header[4]; 
+	/**
+	 * Size of the wav portion of the file, which follows the first 8 bytes
+	 */
+    int wav_size;
+	/**
+	 * Contains "WAVE" from wav files
+	 */
+    char wave_header[4]; 
 
-// Riff
-char chunk_id[4]; //Contains Riff
-int chunk_size;   //Size of file - 8 bytes
-char format[4];	  //Contains Wave
+    /**
+	 *Format Header - Contains "fmt " (includes trailing space)
+	 */
+    char fmt_header[4]; 
+	/**
+	 * Format chunk size for files, Should be 16 for PCM
+	 */
+    int fmt_chunk_size; 
+	/**
+	 * Audio Format data, Should be 1 for PCM. 3 for IEEE Float
+	 */
+    short audio_format; 
+	/**
+	 * Number of channels in wav files, mono or stereo
+	 */
+    short num_channels;
+	/**
+	 * Sample Rate in wav files
+	 */
+    int sample_rate;
+	/**
+	 * Number of bytes per second. sample_rate * num_channels * Bytes Per Sample
+	 */
+    int byte_rate;  
+	/**
+	 * num_channels * Bytes Per Sample
+	 */
+    short sample_alignment;  
+	/**
+	 *  Number of bits per sample from wav files
+	 */
+    short bit_depth;
 
+    // Data
 
-//FMT
-char subChunk_id1[4]; //Contains fmt_
-int subChunk_size1;   //16 for Pcm
-short audioFormat;    //1 for Pcm
-short numChannels;    //Mono = 1, Stereo = 2
-int sampleRate;	      //8000, 44100
-int byteRate;         // = sampleRate * numChannels * bytesPerSample/8
-short blockAlign;     // = numChannels * bytesPerSample/8
-short bitsPerSample;  // 8, 16
+	/**
+	 * Contains "data"
+	 */
+    char data_header[4]; 
+	/**
+	 * Number of bytes in data. Number of samples * num_channels * sample byte size
+	 */
+    int data_bytes;
+    // char bytes[]; // Remainder of wave file is bytes
+} wav_header;
 
-//Data
-char subChunk_id2[4]; //Contains Data
-int subChunk_size2;   // = numSamples * numChannels * bitsPerSample/8
-
-
-
-
-
-}wav_header;
+#endif
