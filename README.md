@@ -10,7 +10,7 @@ Team members: Zachary Strazi, Connor Mckelvey, Logan Church
 Team Contributions:
 
 Zachary Strazi: Wav_header.h, Processor.h, Normalization.h and .cpp, Echo.h and .cpp, Gain adjust.h and
-.cpp, Uml diagram, Doxygen formating, Readme documentation
+.cpp, Makefile, Uml diagram, Doxygen formating, Readme documentation
 
 Connor Mckelvey: User interface.h and .cpp, Main.cpp, Printer.h and .cpp
 
@@ -20,3 +20,4 @@ Printer.h and .cpp
 
 
 Uml Diagram:
+
